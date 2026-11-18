@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Skin — скачать</title>
+<meta name="theme-color" content="#07070b">
+<meta name="description" content="Скачать Quick Skin: мод для Minecraft Java 26.3 и пак скинов для Bedrock 26.52. Один архив, одна кнопка.">
+<meta property="og:title" content="Quick Skin — скачать">
+<meta property="og:description" content="Мод для Java 26.3 и пак скинов для Bedrock 26.52 в одном архиве.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff2d78'/%3E%3Cpath d='M32 14v24m-9-9 9 9 9-9' stroke='%2317040c' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#07070b;
+    --fg:#f5f5f7;
+    --muted:#8b8b96;
+    --accent:#ff2d78;
+    --accent-2:#ff6aa0;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    background:
+      radial-gradient(60% 50% at 50% 0%, rgba(255,45,120,.18), transparent 70%),
+      radial-gradient(40% 30% at 85% 100%, rgba(120,80,255,.10), transparent 70%),
+      var(--bg);
+    color:var(--fg);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(70% 60% at 50% 30%, #000 25%, transparent 100%);
+    mask-image:radial-gradient(70% 60% at 50% 30%, #000 25%, transparent 100%);
+  }
+  .page{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:999px;
+    background:rgba(255,255,255,.025);
+    color:var(--muted);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+  .dot{
+    width:7px;
+    height:7px;
+    border-radius:2px;
+    background:var(--accent);
+    box-shadow:0 0 12px var(--accent);
+  }
+  h1{
+    margin:26px 0 0;
+    font-size:clamp(60px, 15vw, 124px);
+    font-weight:800;
+    line-height:.92;
+    letter-spacing:-.05em;
+  }
+  .lead{
+    margin:22px 0 0;
+    max-width:520px;
+    color:var(--muted);
+    font-size:clamp(14px, 3.6vw, 17px);
+    line-height:1.55;
+  }
+  .download{
+    margin-top:38px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:13px;
+    width:min(100%, 420px);
+    height:68px;
+    border-radius:18px;
+    background:linear-gradient(180deg, var(--accent-2), var(--accent));
+    color:#1a0410;
+    font-size:19px;
+    font-weight:800;
+    letter-spacing:-.01em;
+    text-decoration:none;
+    box-shadow:
+      0 12px 40px rgba(255,45,120,.28),
+      inset 0 1px 0 rgba(255,255,255,.35);
+    transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .download:hover{
+    transform:translateY(-2px);
+    box-shadow:
+      0 18px 50px rgba(255,45,120,.36),
+      inset 0 1px 0 rgba(255,255,255,.4);
+    filter:saturate(1.06);
+  }
+  .download:active{
+    transform:translateY(1px) scale(.995);
+    box-shadow:0 8px 24px rgba(255,45,120,.24);
+  }
+  .download:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:4px;
+  }
+  .download svg{
+    width:21px;
+    height:21px;
+    flex:none;
+  }
+  .meta{
+    margin:16px 0 0;
+    color:#6c6c78;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12.5px;
+    letter-spacing:.02em;
+  }
+  .alt{
+    margin:26px 0 0;
+    font-size:13px;
+    color:#6c6c78;
+  }
+  .alt a{
+    color:#a9a9b4;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.14);
+    padding-bottom:2px;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .alt a:hover{
+    color:#fff;
+    border-color:var(--accent);
+  }
+  footer{
+    position:relative;
+    z-index:1;
+    padding:22px 20px;
+    text-align:center;
+    color:#5b5b66;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="badge"><span class="dot"></span>Quick Skin</div>
+    <h1>Скачать</h1>
+    <p class="lead">Пак скинов для Minecraft Bedrock 26.52. Скачай, открой файл — и скин уже в гардеробе.</p>
+    <a class="download" href="downloads/Quick-Skin-Bedrock.zip" download="Quick-Skin-Bedrock.zip" type="application/zip">
+      <span>Скачать</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 4v11"/>
+        <path d="m7 10 5 5 5-5"/>
+        <path d="M5 20h14"/>
+      </svg>
+    </a>
+    <p class="meta">Quick-Skin-Bedrock.zip · 9,7 КБ</p>
+    <p class="alt">Мод для Java 26.3 — <a href="https://modrinth.com/mod/quick-skin/versions" target="_blank" rel="noopener">официальная страница на Modrinth ↗</a></p>
+  </main>
+  <footer>Java 26.3 · Bedrock 26.52</footer>
+</body>
+</html>
